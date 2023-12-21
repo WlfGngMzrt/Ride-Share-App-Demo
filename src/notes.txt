@@ -1,0 +1,76 @@
+This file is just a notes file to ensure the project is build on track
+
+1. Summary of the system :
+
+Objective :
+
+To build an application that can manage car sharing capabilities.
+
+System must allow users to participate in a ride-sharing journey along a
+specific path.
+
+Option :
+    1. Join the driver in the journey
+    2. Join the passenger on the journey
+
+There may be multiple trips from the starting and the end point.
+user may choose from the list of trips.
+
+Must have a registration Service -> to register the user ( driver/passenger )
+Must have a vehicle registration service ->
+
+User must be able to propose a trip
+
+Strategy : can ride themselves or for another person
+
+
+Model :
+0. User
+1. Driver
+2. Passenger
+3. Vehicle
+4. Trip
+
+Repo Layer:
+
+Here we are implementing using the HashMap in actual you have to use a
+db
+
+Also note in this layer only focus on the operations that a DB would do
+
+Saving Entry
+Retrieval of Entry
+
+
+Note : While saving of the user the ID which should to be given to all
+classes, this must be filled in by the DB/Repository layer
+
+Here since we are using a repo layer,so we have to put a static variable local to
+that class which we can increment while registering a new user and this same
+can be set to the id of the entity we are saving.
+
+
+1. Passenger Repo
+2. Driver Repo
+3. Vehicle Repo
+4. Trip Repo
+
+
+Service Layer : Holds the business logic
+
+1. User Service Layer :
+
+This will hold the business logic. Here I have created two separate services
+for the Driver and Passenger.
+
+DriverService
+PassengerService
+VehicleService
+
+Controller Layer : This talks to the front end and the back end.
+
+DriverController
+PassengerController
+VehicleController
+
+
