@@ -1,24 +1,22 @@
-package model;
+package dto;
 
-import java.util.List;
+import model.TripStatus;
+import model.Vehicle;
 
-public class Trip {
-    private int id;
+public class TripProposalRequestDTO {
     private String origin;
     private String destination;
     private Vehicle vehicle;
     private TripStatus tripStatus;
     private int availableSeats;
-    private List<Passenger> passengerList;
 
-    public int getId() {
-        return id;
+    public TripProposalRequestDTO(String origin, String destination, Vehicle vehicle, TripStatus tripStatus, int availableSeats) {
+        this.origin = origin;
+        this.destination = destination;
+        this.vehicle = vehicle;
+        this.tripStatus = tripStatus;
+        this.availableSeats = availableSeats;
     }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getOrigin() {
         return origin;
     }
@@ -43,12 +41,12 @@ public class Trip {
         this.vehicle = vehicle;
     }
 
-    public List<Passenger> getPassengerList() {
-        return passengerList;
+    public TripStatus getTripStatus() {
+        return tripStatus;
     }
 
-    public void setPassengerList(List<Passenger> passengerList) {
-        this.passengerList = passengerList;
+    public void setTripStatus(TripStatus tripStatus) {
+        this.tripStatus = tripStatus;
     }
 
     public int getAvailableSeats() {
@@ -57,13 +55,5 @@ public class Trip {
 
     public void setAvailableSeats(int availableSeats) {
         this.availableSeats = availableSeats;
-    }
-
-    public TripStatus getTripStatus() {
-        return tripStatus;
-    }
-
-    public void setTripStatus(TripStatus tripStatus) {
-        this.tripStatus = tripStatus;
     }
 }
