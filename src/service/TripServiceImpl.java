@@ -1,5 +1,6 @@
 package service;
 
+import exception.TripNotFoundException;
 import model.Trip;
 import model.TripStrategy;
 import repository.TripRepository;
@@ -20,5 +21,10 @@ public class TripServiceImpl implements TripService{
     @Override
     public Trip chooseTrip(String startLocation, String endLocation, int seatCount, TripStrategy tripStrategy) {
         return null;
+    }
+
+    @Override
+    public Trip getTrip(int tripId) throws TripNotFoundException {
+        return tripRepository.getTrip(tripId);
     }
 }

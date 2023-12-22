@@ -1,7 +1,6 @@
 package model;
 
 public class Vehicle {
-
     private int id;
     private String color;
     private String model;

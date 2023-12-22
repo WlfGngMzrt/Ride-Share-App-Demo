@@ -2,10 +2,9 @@ package controller;
 
 import dto.TripProposalRequestDTO;
 import exception.DriverNotFoundException;
-import model.Driver;
+import exception.TripNotFoundException;
 import model.Trip;
 import model.User;
-import model.Vehicle;
 import repository.DriverRepository;
 import repository.TripRepository;
 import service.DriverService;
@@ -33,5 +32,9 @@ public class TripController {
         User proposer = driverService.getUser(trip.getVehicle().getDriverId());
         driverService.registerTrip(trip, proposer.getId());
         return tripService.proposeTrip(trip);
+    }
+
+    public Trip getTrip(int id) throws TripNotFoundException {
+        return tripService.getTrip(id);
     }
 }

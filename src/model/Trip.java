@@ -66,4 +66,17 @@ public class Trip {
     public void setTripStatus(TripStatus tripStatus) {
         this.tripStatus = tripStatus;
     }
+
+    @Override
+    public String toString() {
+        return "Trip{" +
+                "id=" + id +
+                ", origin='" + origin + '\'' +
+                ", destination='" + destination + '\'' +
+                ", vehicle=" + vehicle +
+                ", tripStatus=" + tripStatus +
+                ", availableSeats=" + availableSeats +
+                ", passengerList=" + passengerList +
+                '}';
+    }
 }
