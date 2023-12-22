@@ -14,7 +14,7 @@ public class TripServiceImpl implements TripService{
 
     @Override
     public Trip proposeTrip(Trip trip) {
-        return null;
+        return tripRepository.saveTrip(trip);
     }
 
     @Override

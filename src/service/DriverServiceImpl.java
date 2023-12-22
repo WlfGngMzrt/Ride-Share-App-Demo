@@ -2,6 +2,7 @@ package service;
 
 import exception.DriverNotFoundException;
 import model.Driver;
+import model.Trip;
 import model.User;
 import model.Vehicle;
 import repository.DriverRepository;
@@ -34,5 +35,12 @@ public class DriverServiceImpl implements DriverService {
         Driver driver = driverRepository.getDriver(driverId);
         driver.getVehicleList().add(vehicle);
         return vehicle;
+    }
+
+    @Override
+    public Trip registerTrip(Trip trip, int driverId) throws DriverNotFoundException {
+        Driver driver = driverRepository.getDriver(driverId);
+        driver.getTripList().add(trip);
+        return trip;
     }
 }

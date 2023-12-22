@@ -10,13 +10,15 @@ public class TripProposalRequestDTO {
     private TripStatus tripStatus;
     private int availableSeats;
 
-    public TripProposalRequestDTO(String origin, String destination, Vehicle vehicle, TripStatus tripStatus, int availableSeats) {
+   public TripProposalRequestDTO(String origin, String destination, Vehicle vehicle, TripStatus tripStatus, int availableSeats) {
         this.origin = origin;
         this.destination = destination;
         this.vehicle = vehicle;
         this.tripStatus = tripStatus;
         this.availableSeats = availableSeats;
+
     }
+
     public String getOrigin() {
         return origin;
     }
